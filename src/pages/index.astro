@@ -1,11 +1,172 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import "../styles/style.css";
+layout: "../layouts/BaseLayout.astro";
+title: "FuturEdge";
 ---
+<canvas id="particleCanvas"></canvas>
 
-<Layout>
-	<Welcome />
-</Layout>
+<section class="section orbit-zone">
+  <h2>Sviluppo Web</h2>
+  <p>Realizziamo siti web moderni e performanti a partire da soli 10&euro;. Perfetti per professionisti, startup e piccole imprese che vogliono una presenza online subito.</p>
+</section>
+
+<section class="section flow-zone">
+  <h2>Marketing & Strategia</h2>
+  <p>Studiamo il tuo pubblico e creiamo campagne intelligenti per trasformare la tua visibilit&agrave; in clienti. Ogni sito pu&ograve; crescere con te, senza sprechi.</p>
+</section>
+
+<section class="section wave-zone">
+  <h2>Ottimizzazione SEO</h2>
+  <p>I tuoi potenziali clienti ti cercano su Google: ti aiutiamo ad essere l&igrave;, con testi, struttura e performance che rispettano le regole dei motori di ricerca.</p>
+</section>
+
+<section class="section bounce-zone">
+  <h2>Sviluppo Indie Games</h2>
+  <p>Creiamo esperienze digitali originali, artistiche e coinvolgenti. Perfette per chi vuole distinguersi con un gioco o un'interfaccia interattiva unica.</p>
+</section>
+
+<section class="section grid-zone">
+  <h2>Chi Siamo</h2>
+  <p>Siamo un team multidisciplinare di sviluppatori, designer e strategist uniti da una missione: rendere il web accessibile, bello e potente per tutti.</p>
+</section>
+
+<section class="section orbit-zone">
+  <h2>Contattaci</h2>
+  <p>Scrivici ora per un preventivo gratuito o inizia con un sito base da 10&euro;. Siamo veloci, creativi e pronti a supportare il tuo progetto digitale.</p>
+  <p></p>
+  <p>xywhyhwh@gmail.com</p>
+</section>
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const canvas = document.getElementById("particleCanvas");
+    const ctx = canvas.getContext("2d");
+  
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+  
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
+  
+    const centerX = () => canvas.width / 2;
+    const centerY = () => canvas.height / 2;
+  
+    const numParticles = 1200;
+    const particles = [];
+  
+    for (let i = 0; i < numParticles; i++) {
+      const orbitRadius = canvas.width * 0.2 + Math.random() * (canvas.width * 0.25);
+      const angle = Math.random() * 2 * Math.PI;
+      particles.push({
+        x: centerX() + Math.cos(angle) * orbitRadius,
+        y: centerY() + Math.sin(angle) * orbitRadius,
+        baseX: 0,
+        baseY: 0,
+        vx: 0,
+        vy: 0,
+        angle,
+        speed: 0.001 + Math.random() * 0.001,
+        orbitRadius,
+        radius: Math.random() * 2.5 + 1,
+        baseY: canvas.height * 0.2 + Math.random() * canvas.height * 0.6,
+        y: 0,
+        state: "orbit",
+        targetState: "orbit"
+      });
+    }
+  
+    function changeState(newState) {
+      particles.forEach(p => p.targetState = newState);
+    }
+  
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.querySelectorAll(".section").forEach(s => s.classList.remove("intersecting"));
+          entry.target.classList.add("intersecting");
+  
+          if (entry.target.classList.contains("orbit-zone")) changeState("orbit");
+          if (entry.target.classList.contains("bounce-zone")) changeState("bounce");
+          if (entry.target.classList.contains("wave-zone")) changeState("wave");
+          if (entry.target.classList.contains("grid-zone")) changeState("grid");
+          if (entry.target.classList.contains("flow-zone")) changeState("flow");
+        }
+      });
+    }, { threshold: 0.6 });
+  
+    document.querySelectorAll(".section").forEach(section => observer.observe(section));
+  
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const cx = centerX();
+      const cy = centerY();
+  
+      // Calcolo dinamico del raggio centrale in base al testo visibile
+      let centralVoid = 200;
+      const active = document.querySelector(".section.intersecting");
+      if (active) {
+        const p = active.querySelector("p");
+        if (p) {
+          const w = p.offsetWidth;
+          const h = p.offsetHeight;
+          centralVoid = Math.sqrt((w / 2 + 60) ** 2 + (h / 2 + 60) ** 2);
+        }
+      }
+  
+      let t = performance.now() * 0.001;
+      for (const p of particles) {
+        if (p.state !== p.targetState) {
+          if (p.targetState === "orbit") {
+            const dx = p.x - cx;
+            const dy = p.y - cy;
+            p.orbitRadius = Math.sqrt(dx * dx + dy * dy);
+            p.angle = Math.atan2(dy, dx);
+          }
+          if (p.targetState === "bounce") {
+            p.vx = (Math.random() - 0.5) * 2;
+            p.vy = (Math.random() - 0.5) * 2;
+          }
+          if (p.targetState === "grid") {
+            p.baseX = Math.round(p.x / 40) * 40;
+            p.baseY = Math.round(p.y / 40) * 40;
+          }
+          p.state = p.targetState;
+        }
+  
+        // Animazioni
+        if (p.state === "orbit") {
+          p.angle += p.speed;
+          p.x = cx + Math.cos(p.angle) * p.orbitRadius;
+          p.y = cy + Math.sin(p.angle) * p.orbitRadius;
+        } else if (p.state === "bounce") {
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+          if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+        } else if (p.state === "wave") {
+          p.y += (cy + Math.sin(t * 2 + p.x * 0.01) * 50 - p.y) * 0.05;
+        } else if (p.state === "grid") {
+          p.x = p.baseX + Math.sin(t * 2 + p.baseX * 0.01) * 4;
+          p.y = p.baseY + Math.cos(t * 2 + p.baseY * 0.01) * 4;
+        } else if (p.state === "flow") {
+          p.x += Math.sin(t + p.y * 0.01) * 0.5;
+          p.y += Math.cos(t + p.x * 0.01) * 0.5;
+        }
+  
+        const dist = Math.sqrt((p.x - cx) ** 2 + (p.y - cy) ** 2);
+        if (dist < centralVoid) continue;
+  
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI);
+        ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
+        ctx.fill();
+      }
+  
+      requestAnimationFrame(animate);
+    }
+  
+    animate();
+  });
+  </script>
