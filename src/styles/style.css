@@ -14,44 +14,44 @@ html, body {
   color: #fff;
 }
 
-/* Canvas sullo sfondo */
+/* Canvas sempre sullo sfondo, ma visibile */
 #particleCanvas {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 3;
   width: 100%;
   height: 100%;
+  z-index: 1;
   pointer-events: none;
 }
 
-/* Sezioni a schermo intero e centrate */
+/* Sezioni a schermo intero */
 .section {
   position: relative;
   z-index: 2;
   height: 100vh;
-  padding: 60px 16px;
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   scroll-snap-align: start;
-  background-color: #000;
+  background-color: transparent;
+  text-align: center;
 }
 
-/* Titolo */
+/* Titoli grandi e leggibili */
 .section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 16px;
+  font-size: 6vw; /* si adatta alla larghezza del device */
+  margin-bottom: 20px;
+  font-weight: bold;
   z-index: 3;
 }
 
-/* Paragrafo */
+/* Paragrafi leggibili e centrati */
 .section p {
-  font-size: 1rem;
-  max-width: 85vw;
-  margin: 0 auto;
+  font-size: 4.5vw;
+  max-width: 90vw;
   line-height: 1.6;
   text-align: justify;
   z-index: 3;
@@ -62,7 +62,7 @@ html, body {
   margin-top: 20px;
 }
 
-/* Responsive font sizing */
+/* Su tablet e desktop ingrandisci proporzionatamente */
 @media (min-width: 768px) {
   .section h2 {
     font-size: 2.2rem;
