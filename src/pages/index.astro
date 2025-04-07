@@ -7,7 +7,10 @@ title: "FuturEdge";
 
 <section class="section orbit-zone">
   <h2>Sviluppo Web</h2>
-  <p>Realizziamo siti web moderni e performanti a partire da soli 10&euro;. Perfetti per professionisti, startup e piccole imprese che vogliono una presenza online subito.</p>
+  <p>Realizziamo siti web moderni e performanti a partire da soli</p>
+  <h2>10&euro; | M</h2>
+  <p>Perfetti per professionisti, startup e piccole imprese che vogliono una presenza online subito.</p>
+
 </section>
 
 <section class="section flow-zone">
@@ -57,7 +60,7 @@ title: "FuturEdge";
     const particles = [];
   
     for (let i = 0; i < numParticles; i++) {
-      const orbitRadius = canvas.width * 0.2 + Math.random() * (canvas.width * 0.25);
+      const orbitRadius = Math.random() * Math.max(canvas.width, canvas.height);
       const angle = Math.random() * 2 * Math.PI;
       particles.push({
         x: centerX() + Math.cos(angle) * orbitRadius,
