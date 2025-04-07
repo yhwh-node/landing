@@ -28,7 +28,7 @@ html, body {
 .section {
   position: relative;
   z-index: 1;
-  min-height: 100vh;
+  height: 100vh;
   padding: 100px 20px;
   text-align: center;
   display: flex;
