@@ -42,7 +42,7 @@ html, body {
 
 /* Titoli grandi e leggibili */
 .section h2 {
-  font-size: 5rem; /* si adatta alla larghezza del device */
+  font-size: 2rem; /* si adatta alla larghezza del device */
   margin-bottom: 20px;
   font-weight: bold;
   z-index: 3;
@@ -50,9 +50,9 @@ html, body {
 
 /* Paragrafi leggibili e centrati */
 .section p {
-  font-size: 4rem;
+  font-size: 1.2rem;
+  width: 50%;
   line-height: 1.6;
-  text-align: justify;
   z-index: 3;
 }
 
