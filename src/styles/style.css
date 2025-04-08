@@ -40,17 +40,17 @@ html, body {
   text-align: center;
 }
 
-/* Titoli grandi e leggibili */
+/* Titoli grandi e leggibili, responsive */
 .section h2 {
-  font-size: 3.2rem; /* si adatta alla larghezza del device */
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
   margin-bottom: 20px;
   font-weight: bold;
   z-index: 3;
 }
 
-/* Paragrafi leggibili e centrati */
+/* Paragrafi leggibili e centrati, responsive */
 .section p {
-  font-size: 2rem;
+  font-size: clamp(1.2rem, 3.2vw, 2rem);
   width: 50%;
   line-height: 1.6;
   z-index: 3;
@@ -59,15 +59,4 @@ html, body {
 /* Distanza tra paragrafi */
 .section p + p {
   margin-top: 20px;
-}
-
-/* Su tablet e desktop ingrandisci proporzionatamente */
-@media (min-width: 1000px) {
-  .section h2 {
-    font-size: 1rem;
-  }
-
-  .section p {
-    font-size: 1.8rem;
-  }
 }
