@@ -35,9 +35,29 @@ title: "FuturEdge";
 
 <section class="section orbit-zone">
   <h2>Contattaci</h2>
-  <p>Scrivici ora per un preventivo gratuito o inizia con un sito base da 10&euro;/m. Siamo veloci, creativi e pronti a supportare il tuo progetto digitale.</p>
-  <p></p>
-  <p>xywhyhwh@gmail.com</p>
+  <p>Scrivici ora per un preventivo gratuito o inizia con un sito da 10&euro;/m. Siamo veloci, creativi e pronti a supportare il tuo progetto digitale.</p>
+<!-- Bottone per aprire il pop-up -->
+<button id="openFormBtn">Contattaci</button>
+
+<!-- Il form pop-up -->
+<div id="contactForm" class="popupForm">
+  <form id="contactFormContent" action="https://formspree.io/f/movepblk" method="POST">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <label for="phone">Telefono:</label>
+    <input type="phone" id="phone" name="phone" required><br>
+
+    <label for="message">Messaggio:</label>
+    <textarea id="message" name="message" required></textarea><br>
+
+    <button type="submit">Invia</button>
+    <button type="button" id="closeFormBtn">Chiudi</button>
+  </form>
+</div>
 </section>
 
 <script is:inline>
@@ -172,4 +192,16 @@ title: "FuturEdge";
   
     animate();
   });
+
+  // Mostra il form quando il bottone viene cliccato
+document.getElementById('openFormBtn').addEventListener('click', function() {
+  document.getElementById('contactForm').style.display = 'block';
+});
+
+// Nascondi il form quando si clicca sul bottone "Chiudi"
+document.getElementById('closeFormBtn').addEventListener('click', function() {
+  document.getElementById('contactForm').style.display = 'none';
+});
+
+
   </script>
