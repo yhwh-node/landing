@@ -51,7 +51,7 @@ html, body {
 /* Paragrafi leggibili e centrati, responsive */
 .section p {
   font-size: clamp(1.2rem, 3.2vw, 2rem);
-  width: 50%;
+  width: 60%;
   line-height: 1.6;
   z-index: 3;
 }
