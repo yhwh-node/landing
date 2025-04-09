@@ -65,6 +65,7 @@ html, body {
   background-color: black;
 }
 
+
 /* Stile del bottone */
 button {
   padding: 12px 24px;
@@ -98,12 +99,17 @@ button:active {
   transform: scale(0.98); /* Leggera compressione al clic */
 }
 
-
+#contactFormContent {
+  margin: 0 auto; /* centratura orizzontale */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center; /* centratura del contenuto */
+}
 
 /* Campi input e textarea in stile moderno minimal */
 #contactFormContent input,
 #contactFormContent textarea {
-  width: 100%;
   padding: 10px 5px;
   margin-bottom: 5px;
   border: none;
