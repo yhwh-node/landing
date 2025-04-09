@@ -194,7 +194,7 @@ button:active {
 }
 
 /* Stili specifici per schermi larghi (desktop) */
-@media (min-width: 982px) {
+@media (min-width: 980px) {
   .form-group.half {
     width: 50%;
   }
