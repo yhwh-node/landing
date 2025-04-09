@@ -202,3 +202,16 @@ button:active {
     flex-direction: row;
   }
 }
+
+/* Stili specifici per schermi larghi (desktop) */
+@media (min-width: 1268px) {
+  .form-group.half {
+    width: 50%;
+  }
+  .form-row {
+    flex-direction: row;
+  }
+}
+
+
+
