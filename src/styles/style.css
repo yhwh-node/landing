@@ -42,8 +42,7 @@ html, body {
 
 /* Titoli grandi e leggibili, responsive */
 .section h4 {
-  font-size: 4rem;
-
+  font-size: 6rem;
   max-width: 500px;
   max-height: 200px;
   margin-bottom: 20px;
@@ -53,7 +52,7 @@ html, body {
 }
 
 .section h2 {
-  font-size: 3.2rem;
+  font-size: 6rem;
   margin-bottom: 20px;
   font-weight: bold;
 
@@ -62,7 +61,7 @@ html, body {
 }
 
 .section p {
-  font-size: 2rem;
+  font-size: 3rem;
   width: 100%;
   max-width: 500px;
 
@@ -204,7 +203,7 @@ button:active {
 /* Testo più piccolo in landscape */
 @media screen and (orientation: landscape) {
   .section h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .section h4 {
