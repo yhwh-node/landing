@@ -100,7 +100,10 @@ button:active {
 }
 
 
+#contactFormContent{
 
+  background: black;
+}
 
 /* Campi input e textarea in stile moderno minimal */
 #contactFormContent input,
