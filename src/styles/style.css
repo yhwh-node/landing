@@ -67,10 +67,6 @@ html, body {
 
 
 
-/* Distanza tra paragrafi */
-.section p + p {
-  margin-top: 20px;
-}
 
 
 /* Stile del bottone */
@@ -208,7 +204,8 @@ button:active {
   }
 
   .section p {
-    font-size: 0.7rem;
+    font-size: 1rem;
+    max-width: 400px;
   }
 
   .section {
