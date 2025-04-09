@@ -43,8 +43,6 @@ html, body {
 /* Titoli grandi e leggibili, responsive */
 .section h4 {
   font-size: 5rem;
-  max-width: 500px;
-  max-height: 200px;
   margin-bottom: 20px;
   font-weight: bold;
   z-index: 3;
@@ -55,8 +53,6 @@ html, body {
   font-size: 6rem;
   margin-bottom: 20px;
   font-weight: bold;
-
-  max-width: 500px;
   z-index: 3;
 }
 
@@ -230,7 +226,7 @@ button:active {
 
 
 /* Stili specifici per schermi larghi (desktop) */
-@media (min-width: 12000px) {
+@media (min-width: 1200px) {
   .section h2 {
     font-size: 3rem;
   }
