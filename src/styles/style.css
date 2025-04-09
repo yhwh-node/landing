@@ -29,7 +29,7 @@ html, body {
 .section {
   position: relative;
   z-index: 2;
-  min-height: 100dvh;
+  min-height: 100vh;
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
@@ -71,7 +71,6 @@ html, body {
 }
 
 
-
 /* Stile del bottone */
 button {
   padding: 12px 24px;
@@ -90,7 +89,7 @@ button.contattaci{
   position: fixed;
   font-size: 2.2rem;
   min-width: 15dvh;
-  top: 10px;
+  bottom:  20px;
   right: 30px;
   z-index: 3;
 }
