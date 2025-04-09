@@ -193,6 +193,12 @@ button:active {
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  body {
+    background-color: pink;
+  }
+}
+
 /* Stili specifici per schermi larghi (desktop) */
 @media (min-width: 981px) {
   .form-group.half {
