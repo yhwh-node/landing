@@ -47,6 +47,7 @@ html, body {
   font-weight: bold;
   z-index: 3;
   color: rgb(74, 160, 74);
+  background-color: black;
 }
 
 .section h2 {
@@ -54,12 +55,14 @@ html, body {
   margin-bottom: 20px;
   font-weight: bold;
   z-index: 3;
+  background-color: black;
 }
 
 .section p {
   font-size: 2.8rem;
   margin-bottom: 20px;
   max-width: 70%;
+  background-color: black;
 }
 
 
