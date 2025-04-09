@@ -231,15 +231,15 @@ button:active {
 
 
 /* Stili specifici per schermi larghi (desktop) */
-@media (min-width: 1281px) {
+@media (min-width: 900px) {
   .section h2 {
     font-size: 3rem;
   }
   .section h4 {
-    font-size: 2.5rem;
+    font-size: 4rem;
   }
   .section p {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
   }
   .form-group.half {
     width: 50%;
