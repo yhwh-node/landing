@@ -171,13 +171,13 @@ button:active {
 }
 
 .checkbox-group {
-  font-size: 14px;
   display: flex;
-  align-items: center;
+  font-size: 14px;
+  align-items: right;
 }
 
 .checkbox-group input {
-  margin-right: 10px;
+  margin-right: 10px;  
 }
 
 .form-row {
