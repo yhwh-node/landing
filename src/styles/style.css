@@ -99,17 +99,13 @@ button:active {
   transform: scale(0.98); /* Leggera compressione al clic */
 }
 
-#contactFormContent {
-  margin: 0 auto; /* centratura orizzontale */
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center; /* centratura del contenuto */
-}
+
+
 
 /* Campi input e textarea in stile moderno minimal */
 #contactFormContent input,
 #contactFormContent textarea {
+  width: 100%;
   padding: 10px 5px;
   margin-bottom: 5px;
   border: none;
@@ -153,7 +149,7 @@ button:active {
 
 /* Bottone di invio */
 #contactFormContent button[type="submit"] {
-  width: 120px;
+  max-width: 120px;
   padding: 12px 20px;
   font-size: 1.5rem;
   background-color: #007aff;
@@ -222,6 +218,32 @@ button:active {
   .form-row {
     flex-direction: row;
   }
+  #contactFormContent input,
+  #contactFormContent textarea {
+    font-size: 0.8rem;
+    margin-bottom: 1px;
+  }
+
+  #contactFormContent button[type="submit"] {
+    font-size: 0.7rem;
+  }
+
+  .checkbox-group {
+    font-size: 0.7rem;
+  }
+
+  #contactFormContent label {
+    margin-bottom: 0px;
+  }
+  
+  #contactFormContent {
+    gap: 1px;
+  }
+
+  .form-group {
+    margin-bottom: 2px;
+  }
+  
 }
 
 
