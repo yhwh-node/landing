@@ -166,8 +166,6 @@ button:active {
 
 .form-group {
   margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
 }
 
 .checkbox-group {
@@ -237,11 +235,12 @@ button:active {
   }
   
   #contactFormContent {
-    gap: 1px;
+    gap: 0px;
   }
 
   .form-group {
-    margin-bottom: 2px;
+    gap: 0px; /* spazio tra Nome e Cognome */
+    margin-bottom: 0px;
   }
   
 }
