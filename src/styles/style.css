@@ -200,24 +200,6 @@ button:active {
 }
 
 
-/* Stili specifici per schermi larghi (desktop) */
-@media (min-width: 1281px) {
-  .section h2 {
-    font-size: 3rem;
-  }
-  .section h4 {
-    font-size: 2.5rem;
-  }
-  .section p {
-    font-size: 1rem;
-  }
-  .form-group.half {
-    width: 50%;
-  }
-  .form-row {
-    flex-direction: row;
-  }
-}
 
 /* Testo più piccolo in landscape */
 @media screen and (orientation: landscape) {
@@ -246,6 +228,27 @@ button:active {
     flex-direction: row;
   }
 }
+
+
+/* Stili specifici per schermi larghi (desktop) */
+@media (min-width: 1281px) {
+  .section h2 {
+    font-size: 3rem;
+  }
+  .section h4 {
+    font-size: 2.5rem;
+  }
+  .section p {
+    font-size: 1.2rem;
+  }
+  .form-group.half {
+    width: 50%;
+  }
+  .form-row {
+    flex-direction: row;
+  }
+}
+
 
 
 
