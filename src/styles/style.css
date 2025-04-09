@@ -51,7 +51,7 @@ html, body {
 }
 
 .section h2 {
-  font-size: 6rem;
+  font-size: 4rem;
   margin-bottom: 20px;
   font-weight: bold;
   z-index: 3;
@@ -166,6 +166,8 @@ button:active {
 
 .form-group {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .checkbox-group {
