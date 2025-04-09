@@ -172,6 +172,8 @@ button:active {
 
 .checkbox-group {
   font-size: 14px;
+  display: flex;
+  align-items: center;
 }
 
 .checkbox-group input {
@@ -216,12 +218,15 @@ button:active {
     width: 50%;
   }
   .form-row {
+    gap: 20px; /* spazio tra Nome e Cognome */
+    margin-bottom: 0px;
     flex-direction: row;
   }
+
   #contactFormContent input,
   #contactFormContent textarea {
     font-size: 0.8rem;
-    margin-bottom: 1px;
+    margin-bottom: 0px;
   }
 
   #contactFormContent button[type="submit"] {
@@ -241,7 +246,6 @@ button:active {
   }
 
   .form-group {
-    gap: 0px; /* spazio tra Nome e Cognome */
     margin-bottom: 0px;
   }
   
