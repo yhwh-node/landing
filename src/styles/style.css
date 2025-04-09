@@ -43,6 +43,8 @@ html, body {
 /* Titoli grandi e leggibili, responsive */
 .section h4 {
   font-size: 4rem;
+
+  max-width: 500px;
   margin-bottom: 20px;
   font-weight: bold;
   z-index: 3;
@@ -50,16 +52,18 @@ html, body {
 }
 
 .section h2 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   margin-bottom: 20px;
   font-weight: bold;
+
+  max-width: 500px;
   z-index: 3;
 }
 
 .section p {
   font-size: 2rem;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
 
   margin-bottom: 20px;
 }
@@ -89,7 +93,6 @@ button {
 button.contattaci{
   position: fixed;
   font-size: 2.2rem;
-  min-width: 15dvh;
   bottom:  20px;
   right: 30px;
   z-index: 3;
@@ -196,7 +199,16 @@ button:active {
 
 
 /* Stili specifici per schermi larghi (desktop) */
-@media (min-width: 981px) {
+@media (min-width: 1281px) {
+  .section h2 {
+    font-size: 3rem;
+  }
+  .section h4 {
+    font-size: 2.5rem;
+  }
+  .section p {
+    font-size: 1rem;
+  }
   .form-group.half {
     width: 50%;
   }
@@ -224,6 +236,12 @@ button:active {
   }
   button.contattaci{
     font-size: 1rem;
+  }
+  .form-group.half {
+    width: 50%;
+  }
+  .form-row {
+    flex-direction: row;
   }
 }
 
