@@ -30,7 +30,6 @@ html, body {
   position: relative;
   z-index: 2;
   min-height: 100dvh;
-  max-height: 100dvh;
   padding: 40px 20px;
   display: flex;
   flex-direction: column;
@@ -209,15 +208,15 @@ button:active {
 /* Testo più piccolo in landscape */
 @media screen and (orientation: landscape) {
   .section h2 {
-    font-size: 2.5rem;
-  }
-
-  .section h4 {
     font-size: 2rem;
   }
 
+  .section h4 {
+    font-size: 2.5rem;
+  }
+
   .section p {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .section {
