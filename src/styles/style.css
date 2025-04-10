@@ -100,12 +100,7 @@ button:active {
 }
 
 
-#contactFormContent{
 
-  padding: 10px 5px;
-  background: black;
-
-}
 
 /* Campi input e textarea in stile moderno minimal */
 #contactFormContent input,
@@ -147,6 +142,8 @@ button:active {
 
 /* Struttura del form */
 #contactFormContent {
+  padding: 10px 5px;
+  background: black;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -175,24 +172,6 @@ button:active {
   flex-direction: column;
 }
 
-.checkbox-wrapper {
-  margin-bottom: 15px;
-}
-
-.checkbox-row {
-  display: grid;
-  grid-template-columns: 10% 90%;
-  align-items: start;
-  gap: 10px;
-  color: white;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-.checkbox-row input[type="checkbox"] {
-  transform: scale(1.2);
-  margin-top: 3px;
-}
 
 .form-row {
   display: flex;
@@ -203,6 +182,25 @@ button:active {
 
 .form-group.half {
   width: 100%;
+}
+
+.checkbox-wrapper {
+  margin-top: 5px;
+}
+
+.checkbox-row {
+  display: grid !important;
+  grid-template-columns: 10% 90%;
+  align-items: start;
+  gap: 10px;
+  color: white;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.checkbox-row input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-top: 4px;
 }
 
 
