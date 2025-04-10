@@ -102,7 +102,9 @@ button:active {
 
 #contactFormContent{
 
+  padding: 10px 5px;
   background: black;
+
 }
 
 /* Campi input e textarea in stile moderno minimal */
@@ -180,6 +182,7 @@ button:active {
 }
 .checkbox-group label{
   font-size: 14px;
+  
 }
 
 .checkbox-group input {
