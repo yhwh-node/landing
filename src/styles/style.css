@@ -180,9 +180,10 @@ button:active {
   font-size: 14px;
   align-items: center;
 }
-.checkbox-group label{
-  font-size: 14px;
-  
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .checkbox-group input {
